@@ -1,0 +1,44 @@
+body {
+    color: black;
+}
+
+.square {
+    background-color: white;
+    width: 155px;
+    height: 155px;
+    float: left;
+    text-align: center;
+    vertical-align: center;
+    line-height: 155px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 120px;
+}
+
+.h-mid {
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
+}
+
+
+#gameboard {
+    margin: auto;
+    background-color: black;
+    height: 500px;
+    width: 500px;
+}
+
+#newgame {
+    margin: auto;
+    margin-top: 5%;
+    display: block;
+}
+
+#infoboard { 
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    height: 20px;
+    text-align: center;
+}

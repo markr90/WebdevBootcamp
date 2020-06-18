@@ -1,0 +1,44 @@
+.row.nopadding {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row.nopadding > [class*='col-'] {
+    padding: 10px 10px;
+}
+
+.img-pad {
+    padding: 10px;
+    border: 1px solid lightgrey;
+}
+
+.addpagemargin {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container .jumbotron {
+    border-radius: 0 !important;
+    color: #003b54;
+    background: #f0f7fa;
+}
+
+.navbar-default {
+    background: #003b54;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+body {
+    padding-top: 70px;
+}
+
+.navbar-right {
+    padding-right: 15px;
+}

@@ -1,0 +1,21 @@
+.highlight { 
+    color: pink;
+    border: 4px solid yellow;
+}
+
+.pinkbackground {
+    background: pink;
+}
+
+.greentext { 
+    color: green;
+}
+
+.hoverover {
+    background: #c4ffd7;
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}

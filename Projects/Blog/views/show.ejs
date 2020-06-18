@@ -1,0 +1,32 @@
+<%- include("partials/header") %>
+
+<div class="container">
+  <%- include("partials/navbar") %>
+
+  <div class="blog-post">
+
+    <div class="d-flex justify-content-between">
+      <h2><%=blog.title%></h2>                
+      <div class="d-flex">
+        <div><a class="text-info px-2" href="/blogs/<%=blog._id%>/edit">Edit</a></div>
+        <div>
+          <form class="align-self-stretch" action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+            <input class="remove-link text-danger" type="submit" value="Remove">
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <span class="date-created d-block"><%=blog.created.getDate()%> <%=blog.created.toLocaleString('default', { month: 'long' })%> <%=blog.created.getFullYear()%></span>
+
+    <img src="<%=blog.image%>">
+
+    <% blog.body.split(/\r?\n/).forEach(function(paragraph) { %>
+      <p><%= paragraph %></p>
+    <% }) %>
+
+  </div>
+
+</div>
+
+<%- include("partials/footer") %>

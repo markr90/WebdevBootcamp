@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+
+<% for (var dog of dogsVar) { %>
+  <p><%=dog.name%> - <%=dog.breed%></p>
+<% } %>
+
+<form action="/adddog" method="POST">
+  <input type="text" placeholder="name" name="name">
+  <input type="text" placeholder="breed" name="breed">
+  <button type="submit">Submit</button>
+</form>
+
+
+
+<%- include("partials/footer") %>

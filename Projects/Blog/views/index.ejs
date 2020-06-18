@@ -1,0 +1,41 @@
+<%- include("partials/header") %>
+
+<div class="container">
+
+  <%- include("partials/navbar") %>
+
+  <div class="blog-container">
+    <% blogs.forEach(function(blog) { %>
+      <div class="row blog-entry-index">
+        <div class="col-auto">
+          <img src="<%=blog.image%>">
+        </div>
+        <div class="col">
+          <div class="d-flex justify-content-between">
+            <h2><a href="/blogs/<%=blog._id%>"><%=blog.title%></a></h2>
+            <div class="dropdown">
+              <button class="btn btn-outline-info align-self-start" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">...</button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/blogs/<%=blog._id%>/edit">Edit</a>
+                <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+                  <button class="dropdown-item text-danger">Remove</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <span class="date-created"><%=blog.created.getDate()%> <%=blog.created.toLocaleString('default', { month: 'long' })%> <%=blog.created.getFullYear()%></span>
+          
+          <% if (blog.body.length > 200) { %>
+            <p><%=blog.body.split(/\r?\n/)[0].substring(0, 200)%>...</p> 
+          <% } else { %>
+            </p><%=blog.body%></p>
+          <% } %>
+        </div>
+      </div>
+      <hr/>
+    <% }) %>
+  </div>
+</div>
+
+<%- include("partials/footer") %>
